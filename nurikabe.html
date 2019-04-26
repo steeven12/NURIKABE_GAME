@@ -1,0 +1,154 @@
+<html>
+
+    <head>
+        <title>Nurikabe Game</title>
+        <link rel="stylesheet" href="nurikabe.css" >
+    </head>
+
+    <body>
+        <p><h1 align="center" id = "title"> NURIKABE GAME </h1></p>
+<!--I found it better to make the user select his board before starting, so i used 3 buttons-->
+     <p><button id="new" onclick="newGame()">New Game (board 1)</button></p>
+     <p><button id="new1" onclick="newGame1()">New Game (board 2)</button></p>
+     <p><button id="new2" onclick="newGame2()">New Game (board 3)</button></p>
+     
+     <p><button id ="check" onclick="checkWin()">Check for win</button></p>
+     <p><button id="reset" onclick=" resetBoard()">Reset</button></p>
+     <p><button id="start" onclick="setTimer1()">Start the game</button></p>
+     <p class = "tips"><ul>
+        <li><span style='color:white'>Click on the box to fill it black</span> <span style='color:yellow'>(first select your board, then click start)</span></li>
+        <li><span style='color:white'>Double click on the box to clear</span></li>
+     </ul>
+    </p>
+
+            <div id="table">
+                <table border="2px solid black">
+
+               <tr>
+                 <td id="cell0" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                 <td id="cell1" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                 <td id="cell2" class="cell"onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                 <td id="cell3"class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                 <td id="cell4" class="cell"onclick="colorBoxBlack(this)" ondblclick="blankBox(this)" ></td>
+                 <td id="cell5" class="cell"onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                 <td id="cell6" class="cell"onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+               </tr>
+
+               <tr>
+                    <td id="cell7" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                    <td id="cell8" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                    <td id="cell9" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                    <td id="cell10"class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                    <td id="cell11" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                    <td id="cell12" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                    <td id="cell13" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                </tr>
+
+                <tr>
+                    <td id="cell14" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                    <td id="cell15" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                    <td id="cell16" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                    <td id="cell17"class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                    <td id="cell18" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)" ></td>
+                    <td id="cell19" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                    <td id="cell20" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                </tr>
+
+                <tr>
+                <td id="cell21" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell22" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell23" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell24"class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell25" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell26" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)" ></td>
+                <td id="cell27" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                </tr>
+
+                <tr>
+                <td id="cell28" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell29" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"> </td>
+                <td id="cell30" class="cell"onclick="colorBoxBlack(this)" ondblclick="blankBox(this)" ></td>
+                <td id="cell31"class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell32" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell33" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell34" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)">  </td>
+                </tr>
+
+                <tr>
+                <td id="cell35" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell36" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell37" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)">  </td>
+                <td id="cell38"class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell39" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell40" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell41" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                </tr>
+
+                <tr>
+                <td id="cell42" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell43" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell44" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell45"class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell46" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)">  </td>
+                <td id="cell47" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell48" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"> </td>
+                </tr>
+
+                 <tr>
+                <td id="cell49" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell50" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell51" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell52"class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell53" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell54" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell55" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                </tr>
+                                  
+                <tr>
+                <td id="cell56" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell57" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)">  </td>
+                <td id="cell58" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell59"class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell60" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell61" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell62" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                </tr>
+
+                <tr>
+                <td id="cell63" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell64" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell65" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell66"class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell67" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell68" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell69" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                </tr>
+
+                <tr>
+                <td id="cell70" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)">  </td>
+                <td id="cell71" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell72" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell73"class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell74" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell75" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                <td id="cell76" class="cell" onclick="colorBoxBlack(this)" ondblclick="blankBox(this)"></td>
+                </tr>
+             </table>
+            </div>
+                 
+    <div id="timer">00:00:00</div>
+    <div class="rules1"><h1>Rules</h1>
+        <span class="rules2">
+        <ul> 
+
+            <li> Each numbered cell is an island cell, the number in it is the number of cells in that island </li>
+            <li> Each island must contain exactly one numbered cell </li>
+            <li> There must be only one sea, which is not allowed to contain "pools", which means 2x2 areas of black cells</li>
+            <li> Cells are initially of unknown color, but can only be black or white. Two same-color cells are considered "connected" if they are adjacent vertically or horizontally, but not diagonally. Connected white cells form "islands", while connected black cells form the "sea". Two islands may only touch at corners. And any cells marked with '1' at the outset are complete islands unto themselves, and can be isolated with black at the beginning.
+            </li>
+            
+        </ul>
+         </span>
+    </div>
+    <script src="nurikabe.js"></script>
+    </body>
