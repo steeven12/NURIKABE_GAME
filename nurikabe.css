@@ -1,0 +1,117 @@
+#title{
+    color: red;
+}
+
+body{
+    background-image: url("https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+    user-select: none;
+}
+
+.rules1{
+    color:red;
+    padding-left: 15px;
+    cursor:pointer;
+    margin-top: 210px;
+
+}
+
+.rules1 .rules2 {
+    visibility: hidden;
+    width: 0px;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+}
+
+.rules1:hover .rules2 {
+    visibility: visible; 
+}
+
+#new{
+    margin-top: 20px;
+    height: 60px;
+    width: 100px;
+    background-color: aqua;
+    cursor:pointer;
+    margin-left: 15px;
+}
+
+#check{
+    margin-top: 20px;
+    height: 60px;
+    width: 100px;
+    background-color: aqua;
+    cursor:pointer;
+    margin-left: 15px;
+
+}
+
+#reset{
+
+    margin-top: 20px;
+    height: 60px;
+    width: 100px;
+    background-color: aqua;
+    cursor:pointer;
+    margin-left: 15px;
+}
+     
+
+#start{
+    margin-top: 20px;
+    height: 60px;
+    width: 100px;
+    background-color: aqua;
+    cursor:pointer;
+    margin-left: 15px;
+    
+}
+
+.cell{
+    height:40px;
+    width: 60px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#table{
+    margin-left: 800px;
+    margin-top: -450px; 
+    background-color: white;
+    width: 470px;
+    cursor: pointer;
+}
+
+#timer{
+    margin-top: -250px;
+    margin-left: 300px;
+    font-size: 30px;
+    border: 1px solid black;
+    width:200px;
+    text-align: center;
+    color:red;
+    border-color: red;
+}
+
+#new1{
+    margin-top: -75px;
+    height: 60px;
+    width: 100px;
+    background-color: aqua;
+    cursor:pointer;
+    margin-left: 150px;
+}
+
+#new2{
+    margin-top: -90px;
+    height: 60px;
+    width: 100px;
+    background-color: aqua;
+    cursor:pointer;
+    margin-left: 300px;
+}
+
+
